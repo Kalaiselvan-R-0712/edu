@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STACKLY Education — page not found.">
+<meta name="theme-color" content="#05070b">
+<title>404 - Page Not Found | STACKLY</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+  --ink:#030811;
+  --bg:#030811;
+  --panel:rgba(10,23,40,.82);
+  --blue:#087fc3;
+  --blue2:#16c8f2;
+  --blue3:#7be7ff;
+  --white:#f5f9ff;
+  --muted:#8194aa;
+  --line:rgba(137,204,255,.14);
+  --container:min(1180px,92%);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;width:100%;height:100%;overflow:hidden}
+body{
+  width:100%;
+  height:100%;
+  min-height:100%;
+  font-family:"DM Sans",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  overflow:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+img{display:block;max-width:100%}
+
+.page-404{
+  width:100%;
+  height:100svh;
+  min-height:100svh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  isolation:isolate;
+  background:#020406;
+}
+.page-404::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background:
+    linear-gradient(90deg,rgba(3,8,17,.96) 0%,rgba(3,8,17,.84) 34%,rgba(3,8,17,.38) 68%,rgba(3,8,17,.84) 100%),
+    url("assets/images/404/01.webp") center/cover no-repeat;
+  transform:scale(1.035);
+  animation:bgDrive 14s ease-in-out infinite alternate;
+}
+.page-404::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 72% 45%,rgba(0,174,255,.20),transparent 28%),
+    linear-gradient(0deg,#030508 0%,transparent 22%,transparent 78%,#030508 100%);
+  pointer-events:none;
+}
+
+.learning-grid{
+  position:absolute;
+  inset:auto 0 0;
+  height:38%;
+  z-index:-1;
+  opacity:.34;
+  background:
+    linear-gradient(115deg,transparent 49.8%,rgba(22,200,242,.22) 50%,transparent 50.2%) 0 0/130px 100%,
+    linear-gradient(180deg,transparent 0 88%,rgba(123,231,255,.14) 89%,transparent 90%) 0 0/100% 72px;
+  transform:perspective(420px) rotateX(55deg) scale(1.3);
+  transform-origin:bottom;
+  mask-image:linear-gradient(to top,black,transparent);
+}
+
+.scanline{
+  position:absolute;
+  left:0;
+  right:0;
+  top:47%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--blue2),transparent);
+  opacity:.38;
+  animation:scan 4s ease-in-out infinite;
+}
+
+.error-shell{
+  width:var(--container);
+  display:grid;
+  grid-template-columns:1fr;
+  align-items:center;
+  justify-items:center;
+  gap:0;
+  height:100%;
+  min-height:0;
+  padding:84px 0 24px;
+}
+
+.error-copy{
+  width:100%;
+  max-width:860px;
+  margin-inline:auto;
+  text-align:center;
+}
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:#7be7ff;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3.4px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  justify-content:center;
+  width:100%;
+  text-align:center;
+}
+.kicker i{font-size:7px;filter:drop-shadow(0 0 8px var(--blue))}
+
+.error-code{
+  font-size:clamp(96px,15vw,205px);
+  line-height:.78;
+  letter-spacing:-13px;
+  font-weight:900;
+  color:transparent;
+  background:linear-gradient(100deg,#fff 10%,#dff9ff 48%,#16c8f2 92%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  text-shadow:0 0 70px rgba(19,140,255,.13);
+  margin-left:0;
+  width:100%;
+  text-align:center;
+}
+.error-title{
+  font-family:"Space Grotesk",sans-serif;
+  margin-top:28px;
+  font-size:clamp(30px,4vw,54px);
+  line-height:1;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+  font-family:"Space Grotesk",sans-serif;
+  width:100%;
+  text-align:center;
+}
+.error-title span{color:var(--blue3)}
+.error-copy p{
+  max-width:780px;
+  margin:20px auto 0;
+  color:#a6b4c2;
+  font-size:14px;
+  line-height:1.8;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:31px;
+}
+.action-btn{
+  min-height:48px;
+  padding:14px 20px;
+  border-radius:7px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  border:1px solid var(--line);
+}
+.home-btn{
+  background:linear-gradient(135deg,#087fc3,#06558f);
+  border-color:#16c8f2;
+  box-shadow:0 15px 45px rgba(8,127,195,.24);
+}
+.back-btn{
+  background:rgba(255,255,255,.035);
+  color:#dce7f1;
+}
+
+.status{margin-top:25px;display:flex;align-items:center;justify-content:center;gap:10px;color:#637589;font-size:9px;letter-spacing:1.7px;text-transform:uppercase}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--blue2);box-shadow:0 0 13px var(--blue2)}
+
+
+.corner{position:absolute;width:45px;height:45px;opacity:.5}
+.corner::before,.corner::after{content:"";position:absolute;background:var(--blue2)}
+.corner::before{width:100%;height:1px;top:0;left:0}
+.corner::after{height:100%;width:1px;top:0;left:0}
+.c1{top:35px;left:35px}
+.c2{top:35px;right:35px;transform:rotate(90deg)}
+.c3{bottom:35px;left:35px;transform:rotate(-90deg)}
+.c4{bottom:35px;right:35px;transform:rotate(180deg)}
+
+@keyframes bgDrive{from{transform:scale(1.035) translateX(0)}to{transform:scale(1.09) translateX(-1.5%)}}
+@keyframes rotate{to{transform:rotate(360deg)}}
+@keyframes scan{0%,100%{transform:translateY(-24px);opacity:.1}50%{transform:translateY(24px);opacity:.5}}
+
+@media (min-width:1025px) and (hover:hover) and (pointer:fine){
+  .action-btn{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background .28s ease}
+  .home-btn:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(22,200,242,.28);border-color:#7be7ff}
+  .back-btn:hover{transform:translateY(-4px);border-color:rgba(99,201,255,.65);background:rgba(22,200,242,.08);box-shadow:0 15px 35px rgba(22,200,242,.12)}
+}
+
+@media (max-width:1024px){
+  .error-shell{
+    width:min(92%,760px);
+    min-height:100svh;
+    padding:90px 0 28px;
+  }
+  .error-copy{width:100%;max-width:760px;text-align:center;margin-inline:auto}
+  .kicker{justify-content:center;text-align:center}
+  .error-code{font-size:clamp(92px,19vw,170px);margin-left:0;text-align:center}
+  .error-title{text-align:center}
+  .error-copy p{text-align:center;margin-left:auto;margin-right:auto}
+}
+
+@media (max-width:767px){
+  .error-shell{width:min(92%,620px);padding:82px 0 22px;gap:0}
+  .error-copy{width:100%;text-align:center}
+  .kicker{justify-content:center;text-align:center;font-size:8px;letter-spacing:2.5px;margin-bottom:14px}
+  .error-code{font-size:clamp(78px,24vw,135px);letter-spacing:-7px;margin-left:0;text-align:center}
+  .error-title{font-size:clamp(25px,7.5vw,38px);letter-spacing:-1px;margin-top:20px;text-align:center}
+  .error-copy p{font-size:12px;line-height:1.65;margin:14px auto 0;max-width:560px;text-align:center}
+  .actions{display:grid;grid-template-columns:1fr;width:min(100%,360px);margin:23px auto 0;gap:9px;justify-content:center}
+  .action-btn{width:100%;min-height:48px;padding:13px 16px}
+  .status{justify-content:center;margin-top:19px;font-size:8px}
+  .learning-grid{height:30%}
+}
+
+@media (max-height:620px){
+  .error-shell{padding-top:54px;padding-bottom:12px}
+  .kicker{margin-bottom:8px}
+  .error-code{font-size:clamp(64px,18vh,110px)}
+  .error-title{margin-top:14px}
+  .error-copy p{margin-top:10px;line-height:1.45}
+  .actions{margin-top:14px}
+  .status{margin-top:10px}
+}
+
+@media (max-width:480px){
+  .error-shell{width:calc(100% - 28px);padding:76px 0 16px}
+  .error-copy{width:100%;text-align:center}
+  .kicker{justify-content:center;text-align:center;font-size:7.5px;letter-spacing:2px;margin-bottom:12px}
+  .error-code{font-size:72px;letter-spacing:-5px;margin-left:0;text-align:center}
+  .error-title{font-size:24px;line-height:1.05;text-align:center}
+  .error-copy p{font-size:11px;line-height:1.6;max-width:330px;text-align:center;margin-left:auto;margin-right:auto}
+  .actions{width:min(100%,330px);margin:20px auto 0}
+  .action-btn{min-height:46px;font-size:9px}
+  .status{justify-content:center;margin-top:15px;font-size:7px;letter-spacing:1.3px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+
+<body>
+<main class="page-404" aria-labelledby="error-title">
+  <div class="learning-grid" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <span class="corner c1" aria-hidden="true"></span>
+  <span class="corner c2" aria-hidden="true"></span>
+  <span class="corner c3" aria-hidden="true"></span>
+  <span class="corner c4" aria-hidden="true"></span>
+
+  <section class="error-shell">
+    <div class="error-copy">
+      <div class="kicker"><i class="fa-solid fa-graduation-cap"></i> STACKLY EDUCATION / LEARNING SYSTEM</div>
+      <div class="error-code" aria-hidden="true">404</div>
+      <h1 class="error-title" id="error-title">Learning Path <span>Not Found.</span></h1>
+      <p>
+        Looks like this learning path has reached a dead end. The page you're trying to access
+        may have moved, been removed, or is no longer available.
+        Let’s get you back to learning.
+      </p>
+
+      <div class="actions">
+        <button class="action-btn back-btn" type="button" id="backBtn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Previous Page
+        </button>
+        <a class="action-btn home-btn" href="index.html">
+          <i class="fa-solid fa-house"></i>
+          Back to Home
+        </a>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        Learning system ready
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const backBtn=document.getElementById('backBtn');
+
+  backBtn.addEventListener('click',function(){
+    if(window.history.length > 1){
+      window.history.back();
+      return;
+    }
+    window.location.href='index.html';
+  });
+
+  // If the browser returns to this page from history, keep the page stable.
+  window.addEventListener('pageshow',function(){
+    document.documentElement.scrollTop=0;
+    document.body.scrollTop=0;
+  });
+})();
+</script>
+</body>
+</html>
