@@ -1,2 +1,2 @@
-# jp
-Jobs Portal
+# edu
+Education
